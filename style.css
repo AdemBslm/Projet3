@@ -1,0 +1,34 @@
+header, aside, footer {
+  background-color: #579c87;
+  color: #fdcb46;
+}
+
+header {
+  border-bottom: solid 1px #a1bf81;
+}
+
+#menu1 {
+  background-color: #fcdfdb;
+  color: #3c1218;
+}
+
+#menu2 {
+  background-color: #fff5fe;
+  color: #c77412;
+}
+
+#menu3 {
+  background-color: #f9f9f9;
+  color: #0887fb;
+}
+
+#menu4 {
+  background-color: #fff5fe;
+  color: #72bf56;
+}
+
+footer {
+  border-top: solid 1px #a1bf81;
+}
+
+/*# sourceMappingURL=style.css.map */
