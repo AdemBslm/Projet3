@@ -1,5 +1,52 @@
+@font-face {
+  font-family: "Metropolis";
+  src: url("polices/Metropolis-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "devonshire";
+  src: url("polices/devonshire-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "flow";
+  src: url("polices/flow-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "croissantone";
+  src: url("polices/croissantone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dancing";
+  src: url("polices/dancingscript-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "worst";
+  src: url("polices/worstveldsling-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kaushan";
+  src: url("polices/kaushanscript-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 header, aside, footer {
   background-color: #579c87;
+  color: #fdcb46;
+  font-family: "Metropolis";
+}
+header a, aside a, footer a {
+  text-decoration: none;
   color: #fdcb46;
 }
 
@@ -29,6 +76,12 @@ main section {
   text-align: center;
   box-shadow: 0 0 15px #a09f9f;
 }
+main section h2 {
+  font-size: 25px;
+}
+main section h3 {
+  font-size: 50px;
+}
 
 aside {
   width: 400px;
@@ -54,12 +107,8 @@ footer nav {
   margin-right: 25px;
 }
 
-a {
-  text-decoration: none;
-  color: #fdcb46;
-}
-
 #container {
+  width: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -68,20 +117,65 @@ a {
 #menu1 {
   background-color: #fcdfdb;
   color: #3c1218;
+  display: flex;
+  flex-direction: column;
+}
+#menu1 h2 {
+  font-family: "devonshire";
+}
+#menu1 h3 {
+  font-family: "flow";
+}
+#menu1 a {
+  text-decoration: none;
+  color: #3c1218;
 }
 
 #menu2 {
   background-color: #fff5fe;
+  color: #c77412;
+  display: flex;
+  flex-direction: column;
+}
+#menu2 h2 {
+  font-family: "croissantone";
+}
+#menu2 a {
+  text-decoration: none;
   color: #c77412;
 }
 
 #menu3 {
   background-color: #f9f9f9;
   color: #0887fb;
+  display: flex;
+  flex-direction: column;
+}
+#menu3 h2 {
+  font-family: "dancing";
+}
+#menu3 h3 {
+  font-family: "worst";
+}
+#menu3 a {
+  text-decoration: none;
+  color: #0887fb;
 }
 
 #menu4 {
   background-color: #fff5fe;
+  color: #72bf56;
+  display: flex;
+  flex-direction: column;
+}
+#menu4 h2 {
+  font-family: "kaushan";
+}
+#menu4 h3 {
+  font-family: "worst";
+}
+#menu4 a {
+  text-decoration: none;
   color: #72bf56;
 }
 
