@@ -81,6 +81,7 @@ main section h2 {
 }
 main section h3 {
   font-size: 50px;
+  margin-top: 5px;
 }
 
 aside {
@@ -122,13 +123,21 @@ footer nav {
 }
 #menu1 h2 {
   font-family: "devonshire";
+  font-size: 50px;
+}
+#menu1 h2 i {
+  background: -webkit-linear-gradient(left, #f05060, #f6916a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #menu1 h3 {
   font-family: "flow";
 }
 #menu1 a {
-  text-decoration: none;
-  color: #3c1218;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 500px;
 }
 
 #menu2 {
@@ -139,44 +148,59 @@ footer nav {
 }
 #menu2 h2 {
   font-family: "croissantone";
+  background: -webkit-linear-gradient(left, #c77412, #8f5aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #menu2 a {
-  text-decoration: none;
-  color: #c77412;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 500px;
 }
 
 #menu3 {
   background-color: #f9f9f9;
-  color: #0887fb;
+  color: #0889fb;
   display: flex;
   flex-direction: column;
 }
 #menu3 h2 {
   font-family: "dancing";
+  background: -webkit-linear-gradient(left, #0229dd, #0889fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #menu3 h3 {
   font-family: "worst";
 }
 #menu3 a {
-  text-decoration: none;
-  color: #0887fb;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 500px;
 }
 
 #menu4 {
   background-color: #fff5fe;
-  color: #72bf56;
+  color: #43973d;
   display: flex;
   flex-direction: column;
 }
 #menu4 h2 {
   font-family: "kaushan";
+  background: -webkit-linear-gradient(left, #43973d, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #menu4 h3 {
   font-family: "worst";
 }
 #menu4 a {
-  text-decoration: none;
-  color: #72bf56;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
