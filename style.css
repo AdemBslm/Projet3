@@ -203,4 +203,17 @@ footer nav {
   height: 500px;
 }
 
+#suspension {
+  display: flex;
+  justify-content: space-around;
+  margin: 8px 10px 0px 10px;
+}
+#suspension .point {
+  background-color: #fdcb46;
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
