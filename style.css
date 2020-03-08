@@ -40,6 +40,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@keyframes point {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes wiggle {
+  to {
+    transform: translate(2%);
+  }
+  from {
+    transform: translate(-2%);
+  }
+}
 header, aside, footer {
   background-color: #579c87;
   color: #fdcb46;
@@ -70,9 +88,6 @@ main section {
   width: 400px;
   height: 500px;
   margin: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   box-shadow: 0 0 15px #a09f9f;
 }
@@ -82,6 +97,27 @@ main section h2 {
 main section h3 {
   font-size: 50px;
   margin-top: 5px;
+}
+main section a {
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+}
+main section article {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 400ms;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section article:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 aside {
@@ -106,6 +142,10 @@ footer {
 footer nav {
   margin-left: 25px;
   margin-right: 25px;
+}
+footer nav:hover {
+  animation: wiggle 150ms ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 #container {
@@ -133,12 +173,6 @@ footer nav {
 #menu1 h3 {
   font-family: "flow";
 }
-#menu1 a {
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 500px;
-}
 
 #menu2 {
   background-color: #fff5fe;
@@ -151,12 +185,6 @@ footer nav {
   background: -webkit-linear-gradient(left, #c77412, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-#menu2 a {
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 500px;
 }
 
 #menu3 {
@@ -174,12 +202,6 @@ footer nav {
 #menu3 h3 {
   font-family: "worst";
 }
-#menu3 a {
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 500px;
-}
 
 #menu4 {
   background-color: #fff5fe;
@@ -196,12 +218,6 @@ footer nav {
 #menu4 h3 {
   font-family: "worst";
 }
-#menu4 a {
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 500px;
-}
 
 #suspension {
   display: flex;
@@ -214,6 +230,19 @@ footer nav {
   height: 8px;
   margin: 5px;
   border-radius: 50%;
+  animation: point 3000ms ease-in-out both infinite;
+  transform-origin: bottom;
+  animation-direction: alternate;
+  animation-duration: 2000ms;
+}
+#suspension .point--1 {
+  animation-delay: 300ms;
+}
+#suspension .point--2 {
+  animation-delay: 600ms;
+}
+#suspension .point--3 {
+  animation-delay: 900ms;
 }
 
 /*# sourceMappingURL=style.css.map */
