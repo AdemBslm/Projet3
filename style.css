@@ -77,7 +77,6 @@ header, aside, footer {
   font-family: "Metropolis";
 }
 header a, aside a, footer a {
-  text-decoration: none;
   color: #fdcb46;
 }
 
@@ -104,17 +103,12 @@ header {
   text-align: center;
   box-shadow: 0 0 15px #a09f9f;
 }
-#pageprincipal section h3 {
+#pageprincipal section p {
   font-size: 50px;
   margin-top: 5px;
+  font-weight: bold;
 }
 #pageprincipal section a {
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 500px;
-}
-#pageprincipal section article {
   transform: scale(1);
   opacity: 1;
   transition: transform 400ms;
@@ -125,7 +119,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-#pageprincipal section article:hover {
+#pageprincipal section a:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
@@ -145,15 +139,22 @@ aside {
 footer {
   border-top: solid 2px #a1bf81;
   display: flex;
-  justify-content: space-between;
   position: sticky;
   bottom: 0px;
 }
-footer nav {
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer ul li {
   margin-left: 25px;
   margin-right: 25px;
 }
-footer nav:hover {
+footer ul li a {
+  font-size: 25px;
+}
+footer ul li:hover {
   animation: wiggle 150ms ease-in-out infinite;
   animation-direction: alternate;
 }
@@ -167,16 +168,19 @@ footer nav:hover {
 
 #mini_menu1 {
   background-color: #fcdfdb;
-  color: #3c1218;
   display: flex;
   flex-direction: column;
 }
 #mini_menu1 h2 {
   font-family: "devonshire";
   font-size: 50px;
+  font-weight: normal;
 }
-#mini_menu1 h3 {
+#mini_menu1 p {
   font-family: "flow";
+}
+#mini_menu1 a {
+  color: #3c1218;
 }
 
 i {
@@ -187,7 +191,6 @@ i {
 
 #mini_menu2 {
   background-color: #fff5fe;
-  color: #c77412;
   display: flex;
   flex-direction: column;
 }
@@ -197,6 +200,9 @@ i {
   background: -webkit-linear-gradient(left, #c77412, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#mini_menu2 a {
+  color: #c77412;
 }
 
 #mini_menu3 {
@@ -212,14 +218,16 @@ i {
   -webkit-text-fill-color: transparent;
   font-size: 35px;
 }
-#mini_menu3 h3 {
+#mini_menu3 p {
   font-family: "worst";
   font-size: 70px;
+}
+#mini_menu3 a {
+  color: #0889fb;
 }
 
 #mini_menu4 {
   background-color: #fff5fe;
-  color: #43973d;
   display: flex;
   flex-direction: column;
 }
@@ -230,9 +238,12 @@ i {
   -webkit-text-fill-color: transparent;
   font-size: 35px;
 }
-#mini_menu4 h3 {
+#mini_menu4 p {
   font-family: "worst";
   font-size: 70px;
+}
+#mini_menu4 a {
+  color: #43973d;
 }
 
 #suspension {
@@ -302,14 +313,15 @@ i {
 #menu1 h2 {
   font-family: "devonshire";
   font-size: 70px;
-}
-#menu1 h3 {
-  font-family: "devonshire";
-  font-size: 50px;
+  font-weight: normal;
 }
 #menu1 h4 {
   text-align: center;
   font-size: 30px;
+}
+#menu1 footer {
+  font-family: "devonshire";
+  font-size: 50px;
 }
 
 #menu2 {
@@ -369,9 +381,12 @@ i {
   font-size: 50px;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
-  padding-left: 0%;
-  list-style-type: none;
+  list-style: none;
 }
 
 #mentions {
