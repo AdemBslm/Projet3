@@ -1,6 +1,13 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Metropolis";
   src: url("polices/Metropolis-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "comics";
+  src: url("polices/typo_comics_demo-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,6 +26,12 @@
 @font-face {
   font-family: "croissantone";
   src: url("polices/croissantone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "smile";
+  src: url("polices/just_gotta_smile-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -77,34 +90,31 @@ header {
   justify-content: center;
 }
 
-main {
+#pageprincipal {
   display: flex;
   margin: auto;
   width: 80%;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-main section {
+#pageprincipal section {
   width: 400px;
   height: 500px;
   margin: 5%;
   text-align: center;
   box-shadow: 0 0 15px #a09f9f;
 }
-main section h2 {
-  font-size: 25px;
-}
-main section h3 {
+#pageprincipal section h3 {
   font-size: 50px;
   margin-top: 5px;
 }
-main section a {
+#pageprincipal section a {
   display: block;
   position: absolute;
   width: 400px;
   height: 500px;
 }
-main section article {
+#pageprincipal section article {
   transform: scale(1);
   opacity: 1;
   transition: transform 400ms;
@@ -115,7 +125,7 @@ main section article {
   justify-content: center;
   align-items: center;
 }
-main section article:hover {
+#pageprincipal section article:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
@@ -155,68 +165,74 @@ footer nav:hover {
   left: 0px;
 }
 
-#menu1 {
+#mini_menu1 {
   background-color: #fcdfdb;
   color: #3c1218;
   display: flex;
   flex-direction: column;
 }
-#menu1 h2 {
+#mini_menu1 h2 {
   font-family: "devonshire";
   font-size: 50px;
 }
-#menu1 h2 i {
+#mini_menu1 h3 {
+  font-family: "flow";
+}
+
+i {
   background: -webkit-linear-gradient(left, #f05060, #f6916a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#menu1 h3 {
-  font-family: "flow";
-}
 
-#menu2 {
+#mini_menu2 {
   background-color: #fff5fe;
   color: #c77412;
   display: flex;
   flex-direction: column;
 }
-#menu2 h2 {
+#mini_menu2 h2 {
   font-family: "croissantone";
+  font-size: 25px;
   background: -webkit-linear-gradient(left, #c77412, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#menu3 {
+#mini_menu3 {
   background-color: #f9f9f9;
   color: #0889fb;
   display: flex;
   flex-direction: column;
 }
-#menu3 h2 {
+#mini_menu3 h2 {
   font-family: "dancing";
   background: -webkit-linear-gradient(left, #0229dd, #0889fb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 35px;
 }
-#menu3 h3 {
+#mini_menu3 h3 {
   font-family: "worst";
+  font-size: 70px;
 }
 
-#menu4 {
+#mini_menu4 {
   background-color: #fff5fe;
   color: #43973d;
   display: flex;
   flex-direction: column;
 }
-#menu4 h2 {
+#mini_menu4 h2 {
   font-family: "kaushan";
   background: -webkit-linear-gradient(left, #43973d, #beff7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 35px;
 }
-#menu4 h3 {
+#mini_menu4 h3 {
   font-family: "worst";
+  font-size: 70px;
 }
 
 #suspension {
@@ -243,6 +259,131 @@ footer nav:hover {
 }
 #suspension .point--3 {
   animation-delay: 900ms;
+}
+
+#menu1, #menu2, #menu3, #menu4 {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px #a09f9f;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 70px 0 70px 0;
+}
+#menu1 section, #menu2 section, #menu3 section, #menu4 section {
+  margin: auto;
+  width: 80%;
+}
+#menu1 article, #menu2 article, #menu3 article, #menu4 article {
+  display: flex;
+}
+#menu1 article li, #menu2 article li, #menu3 article li, #menu4 article li {
+  margin-bottom: 20px;
+}
+#menu1 h2, #menu1 h3, #menu2 h2, #menu2 h3, #menu3 h2, #menu3 h3, #menu4 h2, #menu4 h3 {
+  text-align: center;
+}
+#menu1 .plats, #menu2 .plats, #menu3 .plats, #menu4 .plats {
+  width: 80%;
+  text-align: start;
+}
+#menu1 .prix, #menu2 .prix, #menu3 .prix, #menu4 .prix {
+  width: 20%;
+  text-align: end;
+}
+
+#menu1 {
+  font-size: 25px;
+  background-color: #fcdfdb;
+  color: #3c1218;
+  font-family: "comics";
+}
+#menu1 h2 {
+  font-family: "devonshire";
+  font-size: 70px;
+}
+#menu1 h3 {
+  font-family: "devonshire";
+  font-size: 50px;
+}
+#menu1 h4 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#menu2 {
+  font-size: 25px;
+  background-color: #fff5fe;
+}
+#menu2 h2 {
+  font-family: "croissantone";
+  background: -webkit-linear-gradient(left, #c77412, #8f5aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+#menu2 h3 {
+  font-size: 30px;
+}
+#menu2 #entrée {
+  color: #c67412;
+}
+#menu2 #plat {
+  color: #a56799;
+}
+#menu2 #dessert {
+  color: #6e4ccc;
+}
+
+#menu3 {
+  font-size: 25px;
+  background-color: #f9f9f9;
+  font-family: "smile";
+}
+#menu3 h2 {
+  font-family: "dancing";
+  background: -webkit-linear-gradient(left, #0229dd, #0889fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+}
+#menu3 h3 {
+  font-size: 30px;
+}
+
+#menu4 {
+  font-size: 30px;
+  background-color: #fff5fe;
+  font-family: "worst";
+  font-weight: bold;
+}
+#menu4 h2 {
+  font-family: "kaushan";
+  background: -webkit-linear-gradient(left, #43973d, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+}
+#menu4 h3 {
+  font-size: 50px;
+}
+
+ul {
+  padding-left: 0%;
+  list-style-type: none;
+}
+
+#mentions {
+  font-family: "Metropolis";
+  font-size: 20px;
+  margin: 0 100px 0 100px;
+}
+#mentions h2, #mentions h3 {
+  text-align: center;
+  font-size: 25px;
+  margin: 50px;
+  color: #fdcb46;
 }
 
 /*# sourceMappingURL=style.css.map */
