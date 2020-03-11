@@ -194,16 +194,16 @@ i {
 #mini_menu2 h2 {
   font-family: "croissantone";
   font-size: 25px;
-  background: -webkit-linear-gradient(left, #c77412, #8f5aff);
+  background: -webkit-linear-gradient(left, #e27f0e, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #mini_menu2 a {
-  color: #c77412;
+  color: #e27f0e;
 }
 
 #mini_menu3 {
-  background-color: #f9f9f9;
+  background-color: #edefef;
   color: #0889fb;
   display: flex;
   flex-direction: column;
@@ -283,7 +283,7 @@ i {
   margin: auto;
   width: 80%;
 }
-#menu1 article, #menu2 article, #menu3 article, #menu4 article {
+#menu1 li, #menu2 li, #menu3 li, #menu4 li {
   display: flex;
 }
 #menu1 h2, #menu1 h3, #menu2 h2, #menu2 h3, #menu3 h2, #menu3 h3, #menu4 h2, #menu4 h3 {
@@ -296,6 +296,11 @@ i {
 #menu1 .prix, #menu2 .prix, #menu3 .prix, #menu4 .prix {
   width: 20%;
   text-align: end;
+}
+#menu1 .titre_section, #menu2 .titre_section, #menu3 .titre_section, #menu4 .titre_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #menu1 {
@@ -321,6 +326,10 @@ i {
   font-size: 50px;
   text-align: center;
 }
+#menu1 img {
+  width: 35%;
+  height: 40%;
+}
 
 #menu2 {
   font-size: 25px;
@@ -328,7 +337,7 @@ i {
 }
 #menu2 h2 {
   font-family: "croissantone";
-  background: -webkit-linear-gradient(left, #c77412, #8f5aff);
+  background: -webkit-linear-gradient(left, #e27f0e, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
@@ -345,10 +354,14 @@ i {
 #menu2 #dessert {
   color: #6e4ccc;
 }
+#menu2 img {
+  width: 30%;
+  height: 40%;
+}
 
 #menu3 {
-  font-size: 25px;
-  background-color: #f9f9f9;
+  font-size: 35px;
+  background-color: #edefef;
   font-family: "smile";
 }
 #menu3 h2 {
@@ -359,7 +372,11 @@ i {
   font-size: 80px;
 }
 #menu3 h3 {
-  font-size: 30px;
+  font-size: 35px;
+}
+#menu3 img {
+  width: 30%;
+  height: 40%;
 }
 
 #menu4 {
