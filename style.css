@@ -71,22 +71,49 @@
     transform: translate(-2%);
   }
 }
-header, aside, footer {
+#container {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#container > header, #container > aside, #container > footer {
   background-color: #579c87;
   color: #fdcb46;
   font-family: "Metropolis";
 }
-header a, aside a, footer a {
+#container > header a, #container > aside a, #container > footer a {
   color: #fdcb46;
 }
-
-header {
+#container > header {
   width: 100%;
   height: 150px;
   border-bottom: solid 2px #a1bf81;
   font-size: 30px;
   display: flex;
   justify-content: center;
+}
+#container > footer {
+  border-top: solid 2px #a1bf81;
+  display: flex;
+  position: sticky;
+  bottom: 0px;
+}
+#container > footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#container > footer ul li {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+#container > footer ul li a {
+  font-size: 25px;
+}
+#container > footer ul li:hover {
+  animation: wiggle 150ms ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 #pageprincipal {
@@ -134,36 +161,6 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-footer {
-  border-top: solid 2px #a1bf81;
-  display: flex;
-  position: sticky;
-  bottom: 0px;
-}
-footer ul {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-footer ul li {
-  margin-left: 25px;
-  margin-right: 25px;
-}
-footer ul li a {
-  font-size: 25px;
-}
-footer ul li:hover {
-  animation: wiggle 150ms ease-in-out infinite;
-  animation-direction: alternate;
-}
-
-#container {
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
 }
 
 #mini_menu1 {
@@ -289,9 +286,6 @@ i {
 #menu1 article, #menu2 article, #menu3 article, #menu4 article {
   display: flex;
 }
-#menu1 article li, #menu2 article li, #menu3 article li, #menu4 article li {
-  margin-bottom: 20px;
-}
 #menu1 h2, #menu1 h3, #menu2 h2, #menu2 h3, #menu3 h2, #menu3 h3, #menu4 h2, #menu4 h3 {
   text-align: center;
 }
@@ -315,13 +309,17 @@ i {
   font-size: 70px;
   font-weight: normal;
 }
-#menu1 h4 {
+#menu1 h3 {
   text-align: center;
   font-size: 30px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
 }
 #menu1 footer {
   font-family: "devonshire";
   font-size: 50px;
+  text-align: center;
 }
 
 #menu2 {
