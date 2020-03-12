@@ -92,6 +92,12 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 599px) {
+  #container > header {
+    font-size: 25px;
+    height: 120px;
+  }
+}
 #container > footer {
   border-top: solid 2px #a1bf81;
   display: flex;
@@ -113,6 +119,14 @@
 #container > footer ul li:hover {
   animation: wiggle 150ms ease-in-out infinite;
   animation-direction: alternate;
+}
+@media (max-width: 599px) {
+  #container > footer ul li {
+    margin-left: 0px;
+  }
+  #container > footer ul li a {
+    font-size: 17px;
+  }
 }
 
 #pageprincipal {
@@ -149,6 +163,19 @@
   transform: scale(1.2);
   opacity: 0.8;
 }
+@media (max-width: 599px) {
+  #pageprincipal section {
+    width: 200px;
+    height: 300px;
+  }
+  #pageprincipal section a {
+    width: 200px;
+    height: 300px;
+  }
+  #pageprincipal section p {
+    font-size: 30px;
+  }
+}
 
 aside {
   width: 400px;
@@ -160,6 +187,15 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 599px) {
+  aside {
+    width: 200px;
+    height: 25px;
+  }
+  aside h2 {
+    font-size: 15px;
+  }
 }
 
 #mini_menu1 {
@@ -177,6 +213,11 @@ aside {
 }
 #mini_menu1 a {
   color: #3c1218;
+}
+@media (max-width: 599px) {
+  #mini_menu1 h2 {
+    font-size: 25px;
+  }
 }
 
 i {
@@ -200,6 +241,11 @@ i {
 #mini_menu2 a {
   color: #e27f0e;
 }
+@media (max-width: 599px) {
+  #mini_menu2 h2 {
+    font-size: 14px;
+  }
+}
 
 #mini_menu3 {
   background-color: #edefef;
@@ -221,6 +267,11 @@ i {
 #mini_menu3 a {
   color: #0889fb;
 }
+@media (max-width: 599px) {
+  #mini_menu3 h2 {
+    font-size: 20px;
+  }
+}
 
 #mini_menu4 {
   background-color: #fff5fe;
@@ -240,6 +291,11 @@ i {
 }
 #mini_menu4 a {
   color: #43973d;
+}
+@media (max-width: 599px) {
+  #mini_menu4 h2 {
+    font-size: 20px;
+  }
 }
 
 #suspension {
@@ -264,6 +320,13 @@ i {
 }
 #suspension .point--3 {
   animation-delay: 900ms;
+}
+@media (max-width: 599px) {
+  #suspension .point {
+    width: 4px;
+    height: 4px;
+    margin: 3px;
+  }
 }
 
 #menu1, #menu2, #menu3, #menu4 {
@@ -299,10 +362,10 @@ i {
   justify-content: space-between;
   align-items: center;
 }
-#menu1 h3, #menu2 h3, #menu3 h3, #menu4 h3 {
+#menu1 .titre_section h3, #menu2 .titre_section h3, #menu3 .titre_section h3, #menu4 .titre_section h3 {
   margin-bottom: 0px;
 }
-#menu1 h3:hover + .bordure, #menu2 h3:hover + .bordure, #menu3 h3:hover + .bordure, #menu4 h3:hover + .bordure {
+#menu1 .titre_section h3:hover + .bordure, #menu2 .titre_section h3:hover + .bordure, #menu3 .titre_section h3:hover + .bordure, #menu4 .titre_section h3:hover + .bordure {
   transform: scaleX(1);
 }
 #menu1 .bordure, #menu2 .bordure, #menu3 .bordure, #menu4 .bordure {
@@ -312,6 +375,44 @@ i {
   width: 100%;
   height: 3px;
   margin-bottom: 0px;
+}
+@media (max-width: 599px) {
+  #menu1, #menu2, #menu3, #menu4 {
+    padding: 30px 0 30px 0;
+  }
+  #menu1 section, #menu2 section, #menu3 section, #menu4 section {
+    width: 90%;
+  }
+  #menu1 section ul, #menu2 section ul, #menu3 section ul, #menu4 section ul {
+    padding-left: 0px;
+    width: 100%;
+  }
+  #menu1 section ul li, #menu2 section ul li, #menu3 section ul li, #menu4 section ul li {
+    width: 100%;
+    flex-direction: column;
+  }
+  #menu1 section ul li p, #menu2 section ul li p, #menu3 section ul li p, #menu4 section ul li p {
+    margin: 1px;
+    font-size: 20px;
+  }
+  #menu1 section ul .plats, #menu2 section ul .plats, #menu3 section ul .plats, #menu4 section ul .plats {
+    width: 100%;
+    text-align: center;
+  }
+  #menu1 section ul .prix, #menu2 section ul .prix, #menu3 section ul .prix, #menu4 section ul .prix {
+    width: 100%;
+    text-align: center;
+  }
+  #menu1 section .titre_section, #menu2 section .titre_section, #menu3 section .titre_section, #menu4 section .titre_section {
+    flex-direction: column;
+    margin: 0px;
+  }
+  #menu1 section .titre_section h3, #menu2 section .titre_section h3, #menu3 section .titre_section h3, #menu4 section .titre_section h3 {
+    margin-top: 0px;
+  }
+  #menu1 section .titre_section .bordure, #menu2 section .titre_section .bordure, #menu3 section .titre_section .bordure, #menu4 section .titre_section .bordure {
+    display: none;
+  }
 }
 
 #menu1 {
@@ -344,6 +445,17 @@ i {
 }
 #menu1 .bordure {
   background-color: #3c1218;
+}
+@media (max-width: 599px) {
+  #menu1 h2 {
+    font-size: 45px;
+  }
+  #menu1 li {
+    margin-bottom: 20%;
+  }
+  #menu1 footer {
+    font-size: 30px;
+  }
 }
 
 #menu2 {
@@ -382,6 +494,15 @@ i {
   width: 30%;
   height: 40%;
 }
+@media (max-width: 599px) {
+  #menu2 h2 {
+    font-size: 45px;
+    margin-bottom: 20%;
+  }
+  #menu2 li {
+    margin-bottom: 15%;
+  }
+}
 
 #menu3 {
   font-size: 35px;
@@ -411,6 +532,15 @@ i {
 #menu3 #dessert .bordure {
   background-color: #229df9;
 }
+@media (max-width: 599px) {
+  #menu3 h2 {
+    font-size: 45px;
+    margin-bottom: 15%;
+  }
+  #menu3 li {
+    margin-bottom: 15%;
+  }
+}
 
 #menu4 {
   font-size: 30px;
@@ -434,6 +564,15 @@ i {
 }
 #menu4 .bordure {
   background-color: #80cb5e;
+}
+@media (max-width: 599px) {
+  #menu4 h2 {
+    font-size: 45px;
+    margin-bottom: 20%;
+  }
+  #menu4 li {
+    margin-bottom: 15%;
+  }
 }
 
 a {
