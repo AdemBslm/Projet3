@@ -345,6 +345,7 @@ i {
 }
 #menu1 li, #menu2 li, #menu3 li, #menu4 li {
   display: flex;
+  margin-bottom: 50px;
 }
 #menu1 h2, #menu1 h3, #menu2 h2, #menu2 h3, #menu3 h2, #menu3 h3, #menu4 h2, #menu4 h3 {
   text-align: center;
@@ -357,18 +358,24 @@ i {
   width: 20%;
   text-align: end;
 }
-#menu1 .titre_section, #menu2 .titre_section, #menu3 .titre_section, #menu4 .titre_section {
+#menu1 section header, #menu2 section header, #menu3 section header, #menu4 section header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
-#menu1 .titre_section h3, #menu2 .titre_section h3, #menu3 .titre_section h3, #menu4 .titre_section h3 {
+#menu1 section header h3, #menu2 section header h3, #menu3 section header h3, #menu4 section header h3 {
+  margin-top: 0px;
   margin-bottom: 0px;
 }
-#menu1 .titre_section h3:hover + .bordure, #menu2 .titre_section h3:hover + .bordure, #menu3 .titre_section h3:hover + .bordure, #menu4 .titre_section h3:hover + .bordure {
+#menu1 section header h3:hover::after, #menu2 section header h3:hover::after, #menu3 section header h3:hover::after, #menu4 section header h3:hover::after {
   transform: scaleX(1);
 }
-#menu1 .bordure, #menu2 .bordure, #menu3 .bordure, #menu4 .bordure {
+#menu1 section header h3::after, #menu2 section header h3::after, #menu3 section header h3::after, #menu4 section header h3::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 1000ms ease-in-out;
@@ -391,7 +398,7 @@ i {
     width: 100%;
     flex-direction: column;
   }
-  #menu1 section ul li p, #menu2 section ul li p, #menu3 section ul li p, #menu4 section ul li p {
+  #menu1 section ul li span, #menu2 section ul li span, #menu3 section ul li span, #menu4 section ul li span {
     margin: 1px;
     font-size: 20px;
   }
@@ -403,14 +410,14 @@ i {
     width: 100%;
     text-align: center;
   }
-  #menu1 section .titre_section, #menu2 section .titre_section, #menu3 section .titre_section, #menu4 section .titre_section {
+  #menu1 section header, #menu2 section header, #menu3 section header, #menu4 section header {
     flex-direction: column;
     margin: 0px;
   }
-  #menu1 section .titre_section h3, #menu2 section .titre_section h3, #menu3 section .titre_section h3, #menu4 section .titre_section h3 {
+  #menu1 section header h3, #menu2 section header h3, #menu3 section header h3, #menu4 section header h3 {
     margin-top: 0px;
   }
-  #menu1 section .titre_section .bordure, #menu2 section .titre_section .bordure, #menu3 section .titre_section .bordure, #menu4 section .titre_section .bordure {
+  #menu1 section header h3::after, #menu2 section header h3::after, #menu3 section header h3::after, #menu4 section header h3::after {
     display: none;
   }
 }
@@ -421,16 +428,21 @@ i {
   color: #3c1218;
   font-family: "comics";
 }
+#menu1 header {
+  font-size: 90px;
+  text-align: center;
+  margin-top: 20px;
+}
 #menu1 h2 {
   font-family: "devonshire";
-  font-size: 70px;
+  font-size: 90px;
   font-weight: normal;
+  margin-top: 0px;
 }
 #menu1 h3 {
   text-align: center;
   font-size: 30px;
   font-weight: normal;
-  display: flex;
   justify-content: space-between;
   margin-bottom: 0px;
 }
@@ -439,12 +451,15 @@ i {
   font-size: 50px;
   text-align: center;
 }
+#menu1 footer i {
+  font-size: 40px;
+}
 #menu1 img {
   width: 35%;
   height: 40%;
 }
-#menu1 .bordure {
-  background-color: #3c1218;
+#menu1 h3::after {
+  color: #3c1218;
 }
 @media (max-width: 599px) {
   #menu1 h2 {
@@ -475,20 +490,20 @@ i {
 #menu2 #entree {
   color: #c67412;
 }
-#menu2 #entree .bordure {
-  background-color: #c67412;
+#menu2 #entree h3::after {
+  color: #c67412;
 }
 #menu2 #plat {
   color: #a56799;
 }
-#menu2 #plat .bordure {
-  background-color: #a56799;
+#menu2 #plat h3::after {
+  color: #a56799;
 }
 #menu2 #dessert {
   color: #6e4ccc;
 }
-#menu2 #dessert .bordure {
-  background-color: #6e4ccc;
+#menu2 #dessert h3::after {
+  color: #6e4ccc;
 }
 #menu2 img {
   width: 30%;
@@ -523,14 +538,14 @@ i {
   width: 30%;
   height: 40%;
 }
-#menu3 #entree .bordure {
-  background-color: #0228dd;
+#menu3 #entree h3::after {
+  color: #0228dd;
 }
-#menu3 #plat .bordure {
-  background-color: #0670f3;
+#menu3 #plat h3::after {
+  color: #0670f3;
 }
-#menu3 #dessert .bordure {
-  background-color: #229df9;
+#menu3 #dessert h3::after {
+  color: #229df9;
 }
 @media (max-width: 599px) {
   #menu3 h2 {
@@ -562,8 +577,8 @@ i {
   width: 30%;
   height: 40%;
 }
-#menu4 .bordure {
-  background-color: #80cb5e;
+#menu4 h3::after {
+  color: #80cb5e;
 }
 @media (max-width: 599px) {
   #menu4 h2 {
